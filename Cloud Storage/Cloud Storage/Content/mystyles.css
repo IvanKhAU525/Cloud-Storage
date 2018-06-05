@@ -1,0 +1,155 @@
+﻿.pth:hover > path{
+    fill: green;
+}
+
+.background {
+    margin-top: 50px;
+}
+.loginAndRegister{
+    opacity:.90;
+}
+
+/*.content {
+    min-height: calc(100vh - 30px);
+}*/
+
+.logo {
+    padding-top: 20px;
+    margin: 0px 0px 20px 0px;
+}
+.paddingbd{
+    padding-top:80px;
+}
+
+#profile {
+    padding:10px;
+}
+
+#profile:hover{
+    background: #eaeaea;
+}
+
+body {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    text-align: center !important;
+    background-color: #f5f5f5;
+}
+
+footer {
+    clear: both;
+}
+
+
+/*clickright*/
+#menu {
+    position: fixed;
+    display: none;
+    z-index: 999999999;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    width: 150px;
+    list-style: none;
+    background: white;
+}
+
+#menu li {
+    border-top: 1px solid #003465;
+    position: relative;
+    margin: 0;
+}
+
+#menu li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4px 0;
+    text-indent: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#menu li a:hover {
+    background: grey;
+}
+
+#menu li ul {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    display: none;
+}
+
+#menu > li:hover ul {
+    display: block
+}
+
+input#download {
+    background: url(/Icons/download-mini.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    border: 0;
+}
+
+
+input#upload {
+    background: url(/Icons/upload-mini.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    border: 0;
+}
+
+
+.menu {
+    width: 100px;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    z-index: 999999;
+    display: none;
+    box-shadow: 0 0 10px #713C3C;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul a {
+    text-decoration: none;
+}
+
+.menu ul li {
+    width: 88%;
+    padding: 6%;
+    background-color: #F04D44;
+    color: #fff;
+}
+
+.menu ul li:hover {
+    background-color: #F7BA4B;
+    color: #444343;
+}
+
+.context_menu_item{
+    margin-left: -15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+}
+
+.nav-name{
+    color: red;
+}
+
+.nav-name:focus {
+    color: white !important;
+}

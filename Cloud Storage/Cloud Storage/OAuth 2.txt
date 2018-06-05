@@ -1,0 +1,10 @@
+﻿Google 
+{
+	207571403774-o7akf3dtmm2s4qgfev1hopt27tp51s0k.apps.googleusercontent.com
+	ckIPFwtnTHb5VxOIzLPqSKNs
+}
+Facebook
+{
+	676700682720879
+	6a1983756c997969b20d1b3ff0fc5839
+}

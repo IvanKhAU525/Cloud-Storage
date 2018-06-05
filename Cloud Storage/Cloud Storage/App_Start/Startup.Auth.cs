@@ -54,15 +54,15 @@ namespace Cloud_Storage
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "676700682720879",
+               appSecret: "6a1983756c997969b20d1b3ff0fc5839");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "207571403774-o7akf3dtmm2s4qgfev1hopt27tp51s0k.apps.googleusercontent.com",
+                ClientSecret = "ckIPFwtnTHb5VxOIzLPqSKNs"
+            });
         }
     }
 }

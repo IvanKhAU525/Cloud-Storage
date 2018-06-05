@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Cloud_Storage.Models;
+using System.IO;
 
 namespace Cloud_Storage.Controllers
 {
@@ -79,7 +80,8 @@ namespace Cloud_Storage.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    //return RedirectToAction("DisplayFiles", "File", new { userName = model.Email });
+                    return RedirectToLocal(returnUrl, model);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -156,20 +158,42 @@ namespace Cloud_Storage.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    await CreateFolderAsync(model.Email);
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("DisplayFiles", "File", new { userName = model.Email });
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        public Task CreateFolderAsync(string name)
+        {
+            return Task.Run(() =>
+            {
+                string path = @"D:\STUDIES\DIPLOMA WORK";
+                string fileName = path + @"\" + name + @"\Date_Of_Creation.txt";
+
+                DirectoryInfo dir = new DirectoryInfo(path + @"\" + name);
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
+
+                using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
+                {
+                    byte[] array = System.Text.Encoding.Default.GetBytes(DateTime.UtcNow.ToString() + "- Date of creation directory for this user");
+                    fs.Write(array, 0, array.Length);
+                }
+            });
         }
 
         //
@@ -333,7 +357,8 @@ namespace Cloud_Storage.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    //return RedirectToAction("DisplayFiles", "File", new { userName = model.Email });
+                    return RedirectToLocal(returnUrl, loginInfo.DefaultUserName);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -387,8 +412,7 @@ namespace Cloud_Storage.Controllers
 
         //
         // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
@@ -443,14 +467,27 @@ namespace Cloud_Storage.Controllers
             }
         }
 
-        private ActionResult RedirectToLocal(string returnUrl)
+        #region RedirectToLocal 2V
+        private ActionResult RedirectToLocal(string returnUrl, LoginViewModel model)
         {
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+
+            return RedirectToAction("UserFiles", "Home", new { user = model.Email });
         }
+
+        private ActionResult RedirectToLocal(string returnUrl, string userName = "")
+        {
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+
+            return RedirectToAction("UserFiles", "Home", new { userName });
+        }
+        #endregion
 
         internal class ChallengeResult : HttpUnauthorizedResult
         {
@@ -481,5 +518,10 @@ namespace Cloud_Storage.Controllers
             }
         }
         #endregion
+
+        public ActionResult Home()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

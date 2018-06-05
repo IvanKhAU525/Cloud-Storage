@@ -1,0 +1,66 @@
+﻿@using Cloud_Storage.Controllers
+@model FilesNFolders
+
+@{
+    ViewBag.Title = "DisplayFiles";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+@Html.Partial("~/Views/Home/ContextMenu.cshtml")
+
+<div class="container" id="Grid">
+    @{
+        if (Model.Files         != null ||
+            Model.Directories   != null)
+        {
+            if (Model.Directories != null)
+            {
+                foreach (var directories in Model.Directories)
+                {
+                    <div class="row">
+                        @foreach (var directory in directories)
+                        {
+                            <a class="btn btn-neutral col-sm-2" href="DisplayFiles?folder=@directory">
+                                <div id="profile">
+                                     <img src="~/Icons/FilesAndFolder/folder.ico" />
+                                     <h6 class="text-truncate">
+                                         @directory
+                                     </h6>
+                                </div>
+                            </a>
+                        }
+                    </div>
+                }
+            }
+
+            if (Model.Files != null)
+            {
+                foreach (var files in Model.Files)
+                {
+                    <div class="row">
+                        @foreach (var file in files)
+                        {
+                        <div class="btn btn-neutral col-sm-2" id="profile">
+                            <div>
+                                <img src="~/Icons/FilesAndFolder/@(file.Value).ico" />
+                            </div>
+                            <div>
+                                <h6 class="text-truncate">
+                                    @file.Key
+                                </h6>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                }
+            }
+        }
+        else
+        {
+            <div class="alert alert-primary" role="alert">
+                Storage is empty
+            </div>
+        }
+    }
+</div>
+

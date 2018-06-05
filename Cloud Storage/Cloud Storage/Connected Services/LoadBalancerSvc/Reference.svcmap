@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f7b471c-a126-438b-9161-25291f8fff37" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53906/LoadBalancer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoadBalancer4.xsd" MetadataType="Schema" ID="863b779a-20c5-483b-a3de-b83098d0c7bc" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?xsd=xsd2" />
+    <MetadataFile FileName="LoadBalancer41.xsd" MetadataType="Schema" ID="9de05faa-1f50-4b1f-8075-b1207058c92b" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?xsd=xsd0" />
+    <MetadataFile FileName="LoadBalancer42.xsd" MetadataType="Schema" ID="f9774d5e-1d61-4a6f-9b60-9d56ae483897" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?xsd=xsd1" />
+    <MetadataFile FileName="LoadBalancer1.disco" MetadataType="Disco" ID="d7651777-6144-4437-aef2-ddb7ba53abbf" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?disco" />
+    <MetadataFile FileName="LoadBalancer43.xsd" MetadataType="Schema" ID="b2800b6a-0d7d-4ef9-87a5-a1fde34b52e2" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?xsd=xsd3" />
+    <MetadataFile FileName="LoadBalancer1.wsdl" MetadataType="Wsdl" ID="f392b406-e40e-462f-be43-9cd29d37fc95" SourceId="1" SourceUrl="http://localhost:53906/LoadBalancer.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

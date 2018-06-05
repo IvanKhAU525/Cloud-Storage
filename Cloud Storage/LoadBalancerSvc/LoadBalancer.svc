@@ -1,0 +1,8 @@
+﻿<%@ ServiceHost Language="C#" 
+
+                Debug="true" 
+
+                Service="LoadBalancerSvc.LoadBalancer" 
+
+                CodeBehind="LoadBalancer.svc.cs" 
+%>

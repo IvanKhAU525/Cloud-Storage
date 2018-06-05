@@ -1,40 +1,45 @@
 ﻿@model Cloud_Storage.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutEntrance.cshtml";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div class="container">
+    <div class="loginAndRegister col align-self-lg-center">
+        <section id="registerForm">
+            @using (Html.BeginForm("Register", "Account", new { ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
+            {
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
+                <img class="mb-4" src="~/Icons/logo-big.png" />
+
+                @Html.AntiForgeryToken()
+
+                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.LabelFor(m => m.Email, new { @class = "sr-only", @for = "inputEmail" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "inputEmail", placeholder = "Email", type = "Email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                @Html.LabelFor(m => m.Password, new { @class = "sr-only", @for = "inputPassword" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "inputPassword", placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "sr-only", @for = "confirmPassword" })
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", id = "confirmPassword", placeholder = "Confirm password" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+
+                <input type="submit" value="Register" class="btn btn-lg btn-primary btn-block" />
+
+                <p>
+                    @Html.ActionLink("Log in", "Login")
+                </p>
+            }
+        </section>
+
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

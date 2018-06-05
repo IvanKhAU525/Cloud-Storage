@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LoadBalancer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53906/LoadBalancer.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53906/LoadBalancer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53906/LoadBalancer.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:53906/LoadBalancer.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILoadBalancer_DonwloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonwloadFile" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DonwloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonwloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DonwloadFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonwloadFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DonwloadFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonwloadFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_UploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_UploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_UploadFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_UploadFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DisplayFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DisplayFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_CreateFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFile" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_CreateFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_CreateFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_CreateFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_ExpUpld_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExpUpld" />
+  </wsdl:message>
+  <wsdl:message name="ILoadBalancer_ExpUpld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExpUpldResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILoadBalancer">
+    <wsdl:operation name="DonwloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DonwloadFile" message="tns:ILoadBalancer_DonwloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DonwloadFileResponse" message="tns:ILoadBalancer_DonwloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonwloadFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DonwloadFiles" message="tns:ILoadBalancer_DonwloadFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DonwloadFilesResponse" message="tns:ILoadBalancer_DonwloadFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/UploadFile" message="tns:ILoadBalancer_UploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/UploadFileResponse" message="tns:ILoadBalancer_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/UploadFiles" message="tns:ILoadBalancer_UploadFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/UploadFilesResponse" message="tns:ILoadBalancer_UploadFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DisplayFiles" message="tns:ILoadBalancer_DisplayFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DisplayFilesResponse" message="tns:ILoadBalancer_DisplayFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteFile" message="tns:ILoadBalancer_DeleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteFileResponse" message="tns:ILoadBalancer_DeleteFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteFiles" message="tns:ILoadBalancer_DeleteFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteFilesResponse" message="tns:ILoadBalancer_DeleteFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/CreateFile" message="tns:ILoadBalancer_CreateFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/CreateFileResponse" message="tns:ILoadBalancer_CreateFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/CreateFolder" message="tns:ILoadBalancer_CreateFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/CreateFolderResponse" message="tns:ILoadBalancer_CreateFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/RegisterUser" message="tns:ILoadBalancer_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/RegisterUserResponse" message="tns:ILoadBalancer_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteUser" message="tns:ILoadBalancer_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/DeleteUserResponse" message="tns:ILoadBalancer_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExpUpld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoadBalancer/ExpUpld" message="tns:ILoadBalancer_ExpUpld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoadBalancer/ExpUpldResponse" message="tns:ILoadBalancer_ExpUpld_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILoadBalancer" type="tns:ILoadBalancer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DonwloadFile">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DonwloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonwloadFiles">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DonwloadFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFiles">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/UploadFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayFiles">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DisplayFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DeleteFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFile">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/CreateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpUpld">
+      <soap:operation soapAction="http://tempuri.org/ILoadBalancer/ExpUpld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoadBalancer">
+    <wsdl:port name="BasicHttpBinding_ILoadBalancer" binding="tns:BasicHttpBinding_ILoadBalancer">
+      <soap:address location="http://localhost:53906/LoadBalancer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

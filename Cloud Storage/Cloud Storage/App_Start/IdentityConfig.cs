@@ -11,6 +11,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Cloud_Storage.Models;
+using Twilio.Clients;
+using System.Diagnostics;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace Cloud_Storage
 {
@@ -27,8 +32,19 @@ namespace Cloud_Storage
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your SMS service here to send a text message.
+            // Twilio Begin
+            var accountSid = System.Configuration.ConfigurationManager.AppSettings["SMSAccountIdentification"];
+            var authToken = System.Configuration.ConfigurationManager.AppSettings["SMSAccountPassword"];
+            var phoneNumber = System.Configuration.ConfigurationManager.AppSettings["SMSAccountFrom"];
+
+            TwilioClient.Init(accountSid, authToken);
+
+            var msg = MessageResource.Create(
+                to: new PhoneNumber(message.Destination),
+                from: new PhoneNumber(phoneNumber),
+                body: message.Body);
             return Task.FromResult(0);
+            // Twilio End
         }
     }
 
@@ -53,11 +69,11 @@ namespace Cloud_Storage
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequiredLength = 3,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireUppercase = false,
             };
 
             // Configure user lockout defaults

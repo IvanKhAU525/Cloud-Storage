@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<div>
+    @if (@Session["ses"] != null)
+    {
+    <div>@Session["ses"]</div>
+    }
+    else
+    {
+        <div>nothing!</div>
+    }
+</div>
