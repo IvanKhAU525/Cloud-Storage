@@ -21,14 +21,6 @@
     padding-top:80px;
 }
 
-#profile {
-    padding:10px;
-}
-
-#profile:hover{
-    background: #eaeaea;
-}
-
 body {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -152,4 +144,33 @@ input#upload {
 
 .nav-name:focus {
     color: white !important;
+}
+
+.navbar-height0{
+    padding: 0rem 1rem;
+}
+
+.body-admin {
+    background-color: #cbcbcb;
+}
+
+.checkbox-margin{
+    margin-bottom: -25px;
+}
+
+.div-f-mxw {
+    max-width: 100px;
+}
+
+.file-size{
+    max-width: 120px;
+    min-width: 100px;
+}
+
+.vis-chkbx > input{
+    visibility:hidden;
+}
+
+.vis-chkbx:hover > input {
+    visibility: visible;
 }

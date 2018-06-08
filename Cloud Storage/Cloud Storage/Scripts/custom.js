@@ -10,13 +10,14 @@
                 if (e.ctrlKey) return;
 
                 //open menu
-                var $parent = $(e.target).parents('#profile');
+                //var $parent = $(e.target).parents('#profile');
 
-                if (!$parent.hasClass('btn')) {
-                    $parent = $(e.target);
-                }
+                //if (!$parent.hasClass('btn')) {
+                //    $parent = $(e.target);
+                //}
 
-                var $targetChild = $parent.children('div').eq(1).children('h6').text()
+                var $targetChild = $(e.target)//.children('a');//.eq(0).children('h6').text();
+                console.log($targetChild)
 
                 var $menu = $(settings.menuSelector)
                     .data("invokedOn", $.trim($targetChild))
@@ -61,9 +62,10 @@
     };
 })(jQuery, window);
 
-$("#Grid div").contextMenu({
+$("#Grid a").contextMenu({
     menuSelector: "#contextMenu",
     menuSelected: function (invokedOn, selectedMenu) {
-        $.get('File/' + selectedMenu.text(), { name: invokedOn });
+        console.log(invokedOn, selectedMenu)
+        //$.get('File/' + selectedMenu.text(), { name: invokedOn });
     }
 });

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Cloud_Storage.BundleConfig" Collapsed="true">
-    <Position X="7.75" Y="1.5" Width="1.5" />
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\BundleConfig.cs</FileName>
@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.EmailService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13" Y="1.5" Width="1.5" />
+    <Position X="11.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\IdentityConfig.cs</FileName>
@@ -23,7 +23,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Cloud_Storage.SmsService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.75" Y="4.5" Width="1.5" />
+    <Position X="13" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\IdentityConfig.cs</FileName>
@@ -31,14 +31,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Cloud_Storage.ApplicationUserManager" Collapsed="true">
-    <Position X="16.5" Y="0.5" Width="1.5" />
+    <Position X="14.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\IdentityConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.ApplicationSignInManager" Collapsed="true">
-    <Position X="13" Y="0.5" Width="1.5" />
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\IdentityConfig.cs</FileName>
@@ -51,13 +51,6 @@
       <FileName>App_Start\RouteConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Startup" Collapsed="true">
-    <Position X="16.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAA=</HashCode>
-      <FileName>App_Start\Startup.Auth.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Cloud_Storage.MvcApplication" Collapsed="true">
     <Position X="14.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
@@ -66,7 +59,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.ASPSMSX2.vouchers" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="5.5" Width="1.5" />
+    <Position X="7.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAQAiBQAAAAAAEAAAAAACgABAAAQAAAAAAAAAAQA=</HashCode>
       <FileName>Connected Services\ASPSMSX2\Reference.cs</FileName>
@@ -74,79 +67,79 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Cloud_Storage.ASPSMSX2.ASPSMSX2SoapClient" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="1.5" Width="1.5" />
+    <Position X="16.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAbhIQAAKgAAAQAAoQEAACSAAACIgkAEAAAACIQGAA=</HashCode>
       <FileName>Connected Services\ASPSMSX2\Reference.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Cloud_Storage.ServiceReference1.Service1Client" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.25" Y="4.5" Width="1.5" />
+  <Class Name="Cloud_Storage.LoadBalancerSvc.LoadBalancerClient" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="14.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAJAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Connected Services\ServiceReference1\Reference.cs</FileName>
+      <HashCode>kCAAAAAEAAAQAAQEAAwIAAIBAIAAJAAAAAFAQgRABAI=</HashCode>
+      <FileName>Connected Services\LoadBalancerSvc\Reference.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Cloud_Storage.Controllers.AccountController" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Controllers.AccountController">
+    <Position X="10.25" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Cloud_Storage.Controllers.AccountController.ChallengeResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\AccountController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>gAAABAChACAAAAAAAAFgEgAABAABMKIAAAMRAAQgAAA=</HashCode>
+      <HashCode>gAAABAChACAAAAAAAAFgEgAABAABMKIACAMRAAQgAAA=</HashCode>
       <FileName>Controllers\AccountController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Controllers.AdminController" Collapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Controllers.FileController">
+    <Position X="8.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
-      <FileName>Controllers\AdminController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Cloud_Storage.Controllers.FileController" Collapsed="true">
-    <Position X="7.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>QCAAEAAAADIgAAAAACQIBAAAAAABAEgAAAEAQQBIAAA=</HashCode>
       <FileName>Controllers\FileController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Controllers.FilesNFolders" Collapsed="true">
-    <Position X="9.5" Y="2.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Controllers.FilesNFolders">
+    <Position X="5" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIA=</HashCode>
       <FileName>Controllers\FileController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Controllers.HomeController" Collapsed="true">
-    <Position X="16.5" Y="2.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Controllers.HomeController">
+    <Position X="8.25" Y="12.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAA=</HashCode>
       <FileName>Controllers\HomeController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Controllers.ManageController" Collapsed="true">
-    <Position X="9.5" Y="3.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Controllers.ManageController">
+    <Position X="6.5" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Cloud_Storage.Controllers.ManageController.ManageMessageId" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\ManageController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAABACAQiAAgAAAAEFhAAAAAAEAIMIAAEEEgAAkAAA=</HashCode>
       <FileName>Controllers\ManageController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Controllers.MobileServerController" Collapsed="true">
-    <Position X="13" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>Controllers\MobileServerController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Cloud_Storage.Models.ExternalLoginConfirmationViewModel" Collapsed="true">
-    <Position X="14.75" Y="1.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Models.ExternalLoginConfirmationViewModel">
+    <Position X="3" Y="16.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\AccountViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Models.ExternalLoginListViewModel" Collapsed="true">
-    <Position X="16.5" Y="1.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Models.ExternalLoginListViewModel">
+    <Position X="8.5" Y="2.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Models\AccountViewModels.cs</FileName>
@@ -160,7 +153,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.VerifyCodeViewModel" Collapsed="true">
-    <Position X="6" Y="5.5" Width="1.5" />
+    <Position X="16.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAEAAAAAAAgAAAAAAAAAAAAAAIAAAAgAAA=</HashCode>
       <FileName>Models\AccountViewModels.cs</FileName>
@@ -174,14 +167,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.LoginViewModel" Collapsed="true">
-    <Position X="7.75" Y="3.5" Width="1.5" />
+    <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAA=</HashCode>
       <FileName>Models\AccountViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Models.RegisterViewModel" Collapsed="true">
-    <Position X="16.5" Y="3.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Models.RegisterViewModel">
+    <Position X="3" Y="19" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
       <FileName>Models\AccountViewModels.cs</FileName>
@@ -201,15 +194,22 @@
       <FileName>Models\AccountViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Cloud_Storage.Models.FileModel" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\FileModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Cloud_Storage.Models.ApplicationUser" Collapsed="true">
-    <Position X="14.75" Y="0.5" Width="1.5" />
+    <Position X="13" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\IdentityModels.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Models.ApplicationDbContext" Collapsed="true">
-    <Position X="11.25" Y="0.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Models.ApplicationDbContext">
+    <Position X="3" Y="14.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\IdentityModels.cs</FileName>
@@ -223,28 +223,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.ManageLoginsViewModel" Collapsed="true">
-    <Position X="11.25" Y="3.5" Width="1.5" />
+    <Position X="13" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.FactorViewModel" Collapsed="true">
-    <Position X="6" Y="2.5" Width="1.5" />
+    <Position X="16.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.SetPasswordViewModel" Collapsed="true">
-    <Position X="13" Y="4.5" Width="1.5" />
+    <Position X="11.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.ChangePasswordViewModel" Collapsed="true">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="7.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
@@ -258,45 +258,52 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Models.VerifyPhoneNumberViewModel" Collapsed="true">
-    <Position X="7.75" Y="5.5" Width="1.5" />
+    <Position X="6" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cloud_Storage.Models.ConfigureTwoFactorViewModel" Collapsed="true">
-    <Position X="11.25" Y="1.5" Width="1.5" />
+  <Class Name="Cloud_Storage.Models.ConfigureTwoFactorViewModel">
+    <Position X="3" Y="17.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\ManageViewModels.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Cloud_Storage.Startup">
+    <Position X="5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\Startup.Auth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Cloud_Storage.ASPSMSX2.ASPSMSX2Soap" Collapsed="true">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAbhIQAAKgAAAQAAoQEAACSAAACIgkAEAAAACIQGAA=</HashCode>
       <FileName>Connected Services\ASPSMSX2\Reference.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Cloud_Storage.ASPSMSX2.ASPSMSX2SoapChannel" Collapsed="true">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Connected Services\ASPSMSX2\Reference.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Cloud_Storage.ServiceReference1.IService1" Collapsed="true">
+  <Interface Name="Cloud_Storage.LoadBalancerSvc.ILoadBalancer" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAJAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Connected Services\ServiceReference1\Reference.cs</FileName>
+      <HashCode>kCAAAAAEAAAQAAQEAAwIAAIBAIAAJAAAAAFAQgRABAI=</HashCode>
+      <FileName>Connected Services\LoadBalancerSvc\Reference.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Cloud_Storage.ServiceReference1.IService1Channel" Collapsed="true">
+  <Interface Name="Cloud_Storage.LoadBalancerSvc.ILoadBalancerChannel" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Connected Services\ServiceReference1\Reference.cs</FileName>
+      <FileName>Connected Services\LoadBalancerSvc\Reference.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

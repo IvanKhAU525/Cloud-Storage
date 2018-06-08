@@ -8,10 +8,10 @@
 
 @Html.Partial("~/Views/Home/ContextMenu.cshtml")
 
-<div class="container" id="Grid">
+<div class="container">
     @{
-        if (Model.Files         != null ||
-            Model.Directories   != null)
+        if (Model.Files != null ||
+            Model.Directories != null)
         {
             if (Model.Directories != null)
             {
@@ -20,14 +20,17 @@
                     <div class="row">
                         @foreach (var directory in directories)
                         {
-                            <a class="btn btn-neutral col-sm-2" href="DisplayFiles?folder=@directory">
-                                <div id="profile">
-                                     <img src="~/Icons/FilesAndFolder/folder.ico" />
-                                     <h6 class="text-truncate">
-                                         @directory
-                                     </h6>
+                            <div class="align-self-start">
+                                <div class="container">  @*vis-chckbx*@
+                                    <input type="checkbox" class="row">
+                                    <a class="btn btn-neutral row" id="Grid" href="DisplayFiles?folder=@directory">
+                                        <div id="profile" class="container file-size">
+                                            <img class="row" src="~/Icons/FilesAndFolder/folder.ico" />
+                                            <h6 class="text-truncate row">@directory</h6>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         }
                     </div>
                 }
@@ -40,16 +43,17 @@
                     <div class="row">
                         @foreach (var file in files)
                         {
-                        <div class="btn btn-neutral col-sm-2" id="profile">
-                            <div>
-                                <img src="~/Icons/FilesAndFolder/@(file.Value).ico" />
+                            <div class="align-self-start">
+                                <div class="container">
+                                    <input type="checkbox" class="row">
+                                    <a class="btn btn-neutral row" id="Grid" href="#">
+                                        <div id="profile" class="container file-size">
+                                            <img src="~/Icons/FilesAndFolder/@(file.Value).ico" />
+                                            <h6 class="text-truncate row">@file.Key</h6>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="text-truncate">
-                                    @file.Key
-                                </h6>
-                            </div>
-                        </div>
                         }
                     </div>
                 }

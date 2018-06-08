@@ -74,6 +74,7 @@ namespace Cloud_Storage.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+            ViewBag.Nick = User.Identity.Name;
             return View(model);
         }
 

@@ -1,0 +1,39 @@
+﻿@using Cloud_Storage.Models;
+@model IQueryable<ApplicationUser>
+
+@{
+    ViewBag.Title = "DisplayUsers";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Email</th>
+            <th scope="col">User name</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Two factor authorization</th>
+            <th scope="col">Password</th>
+            <th scope="col">Submit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                @using (Html.BeginForm("EditModel", "Account", FormMethod.Post))
+                {
+
+                    <th class="row">@Html.TextBox("Email", row.Email)</th>
+                    <td>@Html.TextBox("UserName", row.UserName)</td>
+                    <td>@Html.TextBox("PhoneNumber", row.PhoneNumber)</td>
+                    <td>@Html.CheckBox("TwoFactorEnabled", row.TwoFactorEnabled)</td>
+                    <td>@Html.TextBox("PasswordHash")</td>
+                    <td><button name="submit" class="btn btn-primary" value="Edit" /></td>
+                    <td><button name="submit" class="btn btn-secondary" value="Delete" /></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+

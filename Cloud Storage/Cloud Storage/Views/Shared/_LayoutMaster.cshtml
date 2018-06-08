@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+    <nav class="navbar navbar-height0 navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/Home">
             <img src="~/Icons/logo-small.png" width="30" height="30" class="d-inline-block align-top" alt="">
             CloudeStorage
@@ -19,39 +19,32 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse ml-5" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse ml-5 justify-content-between" id="navbarNavAltMarkup">
 
-            <div class="navbar-nav ml-2">
-                <a class="mx-2" href="#">
+            <div class="ml-2 navbar-nav">
+                <a class="mx-2 mh-100" href="#">
                     <img src="~/Icons/baseline-cloud_download-24px.svg" />
                 </a>
-                <a class="mx-2" href="#">
+                <a class="mx-2 mh-100" href="#">
                     <img src="~/Icons/baseline-cloud_upload-24px.svg" />
                 </a>
             </div>
 
+            <!--RIGHT PART OF NAVBAR   
+                                    -->
             <div class="navbar-nav">
-                <a class="mx-2 nav-item nav-link" href="/Index/Manage">
-                    Иван Бесчетников
-                    <img src="~/Icons/accountbox-24px.svg" class="mx-2"/>
+                <div class="navbar-nav border-left border-right border-primary rounded">
+                    <a class="mx-2 nav-item nav-link text-white" href="/Manage/Index">
+                        Иван Бесчетников
+                        <img src="~/Icons/accountbox-24px.svg" class="mx-2" />
+                    </a>
+                </div>
+
+                <a class="navbar-nav px-3" href="/Account/LogOff">
+                    <img src="~/Icons/log_off-24px.svg" />
                 </a>
             </div>
-
-            <a class="navbar-nav" href="/Account/LogOff">
-                <img src="~/Icons/log_off-24px.svg"/>
-            </a>
-
         </div>
-
-        
-        @*<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                </div>
-            </div>*@
     </nav>
 
     <div class="body-content background">
@@ -61,7 +54,7 @@
     <div>@RenderSection("UserFiles", required: false)</div>
 
     <footer>
-        <p class="modal-footer">&copy; @DateTime.Now.Year – CloudStorage</p>
+        <p>&copy; @DateTime.Now.Year - Cloud Service</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")

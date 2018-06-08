@@ -10,7 +10,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Cloud_Storage.Models;
 using System.IO;
-
 namespace Cloud_Storage.Controllers
 {
     [Authorize]
@@ -519,9 +518,37 @@ namespace Cloud_Storage.Controllers
         }
         #endregion
 
-        public ActionResult Home()
+        #region AdminPart
+
+        [HttpGet]
+        public ActionResult DisplayUsers()
         {
-            throw new NotImplementedException();
+            return View(UserManager.Users);
         }
+
+        [HttpPost]
+        public async Task<ActionResult> EditModel(ApplicationUser user, string submit)
+        {
+            try
+            {
+                if (submit == "Delete") { await UserManager.DeleteAsync(user); }
+                else
+                {
+                    if (user is null) throw new Exception("Model is empty!");
+
+                    user.PasswordHash = new PasswordHasher().HashPassword(user.PasswordHash);
+                    await UserManager.UpdateAsync(user);
+                }
+            }
+                
+            catch (Exception ex)
+            {
+                return Content(ex.Message);
+            }
+
+            return RedirectToAction("DisplayUsers");
+        }
+
+        #endregion
     }
 }

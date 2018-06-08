@@ -24,31 +24,11 @@ namespace Cloud_Storage.Controllers
         }
 
         [RequireHttps]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        [RequireHttps]
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        [RequireHttps]
         public ActionResult UserFiles(string userName)
         {
             ViewBag.UserName = userName;
             return View();
         }
 
-        public ActionResult UploadFiles()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

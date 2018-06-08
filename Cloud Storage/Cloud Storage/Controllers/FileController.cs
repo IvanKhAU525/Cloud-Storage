@@ -26,7 +26,7 @@ namespace Cloud_Storage.Controllers
         // GET: File
         public ViewResult DisplayFiles(string folder)
         {
-            return View(new FilesNFolders());
+            //return View(new FilesNFolders());
 
             if (HttpContext.User.Identity.IsAuthenticated == false) { return View("~/Views/Account/Login.cshtml"); }
 
@@ -49,13 +49,21 @@ namespace Cloud_Storage.Controllers
             return View(files);
         }
 
-        public ActionResult Delete(string name)
+        public ActionResult DeleteAccount(string name)
         {
 
             var path = HttpContext.Request;
             var user = HttpContext.User.Identity.Name;
             return View();
         }
+
+        public ActionResult CreateAccount(string name) { return null; }
+
+        public ActionResult DownloadFile(string name) { return null; }
+
+        public ActionResult DownloadFiles(List<string> list) { return null; }
+
+        public ActionResult UploadFile(Stream file) { return null; }
 
         public ActionResult UploadFiles(HttpPostedFileBase[] files)
         {
@@ -80,6 +88,21 @@ namespace Cloud_Storage.Controllers
              }*/
             return View();
         }
+
+        public ActionResult DeleteFile(string name) { return null; }
+
+        public ActionResult DeleteFiles(List<string> list) { return null; }
+
+        public ActionResult CreateFile(string name) { return null; }
+
+        public ActionResult SaveEditedFile(string name) { return null; }
+
+        public ActionResult OpenFile(string name) { return null; }
+
+        public ActionResult CreateFolder(string name) { return null; }
+
+        public ActionResult DeleteFolder(string name) { return null; }
+
 
         #region Helpers
 
@@ -131,31 +154,31 @@ namespace Cloud_Storage.Controllers
 
         #endregion
 
-        private void ЗагрузкаФайла()
-        {
-            byte[] buffer = new byte[4096];
-            byte[] memSize;
-            int size = 0;
-            var response = _svc.DonwloadFile("download/Sleeping_At_Last-Turning_Page_Instrument.mp3");
+        //private void ЗагрузкаФайла()
+        //{
+        //    byte[] buffer = new byte[4096];
+        //    byte[] memSize;
+        //    int size = 0;
+        //    var response = _svc.DonwloadFile("download/Sleeping_At_Last-Turning_Page_Instrument.mp3");
 
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                while ((size = response.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    memoryStream.Write(buffer, 0, size);
-                }
-                memSize = memoryStream.ToArray();
-            }
+        //    using (MemoryStream memoryStream = new MemoryStream())
+        //    {
+        //        while ((size = response.Read(buffer, 0, buffer.Length)) > 0)
+        //        {
+        //            memoryStream.Write(buffer, 0, size);
+        //        }
+        //        memSize = memoryStream.ToArray();
+        //    }
 
-            Response.AddHeader("Content-Disposition", "attachment; filename=" + "FreeMemory.txt");
-            Response.AddHeader("Content-Length", memSize.Length.ToString());
-            Response.ContentType = "application/octet-stream";
-            Response.OutputStream.Write(memSize, 0, memSize.Length);
-            Response.End();
+        //    Response.AddHeader("Content-Disposition", "attachment; filename=" + "FreeMemory.txt");
+        //    Response.AddHeader("Content-Length", memSize.Length.ToString());
+        //    Response.ContentType = "application/octet-stream";
+        //    Response.OutputStream.Write(memSize, 0, memSize.Length);
+        //    Response.End();
 
-            response.Close();
-            _svc.Close();
-        }
+        //    response.Close();
+        //    _svc.Close();
+        //}
     }
 
     public class FilesNFolders
