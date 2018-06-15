@@ -6,7 +6,7 @@
       <HashCode>AAQAAAIAAAAIAAEAAAEAAAICQAEAACAAAEAAAAAAAAA=</HashCode>
       <FileName>LoadBalancer.svc.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="LoadBalancerSvc.Management.Account" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />

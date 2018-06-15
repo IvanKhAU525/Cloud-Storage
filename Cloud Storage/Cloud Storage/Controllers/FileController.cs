@@ -34,17 +34,24 @@ namespace Cloud_Storage.Controllers
 
             // Create object for stroing types of files
             var files = new FilesNFolders();
-            
+
             // Connecting to ftp-server and getting files and folders
-            var filesAndFolders = _svc.DisplayFiles((string)Session["path"]);
-            
-            // Sorting file object
-            var sortedFolders = filesAndFolders.Where(x => x[0] == '#').Select(x => x.Substring(1));
-            var sortedFiles = filesAndFolders.Where(x => x[0] != '#');
-            
-            // Creating model for view 
-            files.Directories = this.TakeAndFiltFolders(sortedFolders, _countOfFiles);
-            files.Files = this.TakeAndFiltFiles(this.CreateFileDictionary(sortedFiles), _countOfFiles);
+            try
+            {
+                var filesAndFolders = _svc.DisplayFiles((string)Session["path"]);
+
+                // Sorting file object
+                var sortedFolders = filesAndFolders.Where(x => x[0] == '#').Select(x => x.Substring(1));
+                var sortedFiles = filesAndFolders.Where(x => x[0] != '#');
+
+                // Creating model for view 
+                files.Directories = this.TakeAndFiltFolders(sortedFolders, _countOfFiles);
+                files.Files = this.TakeAndFiltFiles(this.CreateFileDictionary(sortedFiles), _countOfFiles);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
 
             return View(files);
         }

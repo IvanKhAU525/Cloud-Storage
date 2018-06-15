@@ -8,7 +8,7 @@
 
 @Html.Partial("~/Views/Home/ContextMenu.cshtml")
 
-<div class="container">
+<div id="Grid" class="container">
     @{
         if (Model.Files != null ||
             Model.Directories != null)
@@ -23,7 +23,7 @@
                             <div class="align-self-start">
                                 <div class="container">  @*vis-chckbx*@
                                     <input type="checkbox" class="row">
-                                    <a class="btn btn-neutral row" id="Grid" href="DisplayFiles?folder=@directory">
+                                    <a class="btn btn-neutral row" href="DisplayFiles?folder=@directory">
                                         <div id="profile" class="container file-size">
                                             <img class="row" src="~/Icons/FilesAndFolder/folder.ico" />
                                             <h6 class="text-truncate row">@directory</h6>
@@ -46,7 +46,7 @@
                             <div class="align-self-start">
                                 <div class="container">
                                     <input type="checkbox" class="row">
-                                    <a class="btn btn-neutral row" id="Grid" href="#">
+                                    <a class="btn btn-neutral row" href="#">
                                         <div id="profile" class="container file-size">
                                             <img src="~/Icons/FilesAndFolder/@(file.Value).ico" />
                                             <h6 class="text-truncate row">@file.Key</h6>
@@ -67,4 +67,7 @@
         }
     }
 </div>
+<iframe style="border-style: none;"
+        src="https://docs.google.com/viewer?url=https://s3.amazonaws.com/scotchio/First-Node-App.pdf &embedded=true" height="390"
+        width="400"></iframe>
 

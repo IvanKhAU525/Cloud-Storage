@@ -1,7 +1,7 @@
 ﻿(function ($, window) {
-
+    
     $.fn.contextMenu = function (settings) {
-
+        console.log('context')
         return this.each(function () {
 
             // Open context menu
@@ -62,7 +62,7 @@
     };
 })(jQuery, window);
 
-$("#Grid a").contextMenu({
+$("#Grid").contextMenu({
     menuSelector: "#contextMenu",
     menuSelected: function (invokedOn, selectedMenu) {
         console.log(invokedOn, selectedMenu)

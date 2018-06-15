@@ -141,7 +141,7 @@ namespace LoadBalancerSvc.Management
                 try
                 {
                     var response = ExecuteRequest(WebRequestMethods.Ftp.ListDirectory);
-                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    var reader = new StreamReader(response.GetResponseStream());
 
                     while (!reader.EndOfStream) { listOfFiles.Add(reader.ReadLine()); }
 

@@ -83,7 +83,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Cloud_Storage.Controllers.AccountController">
-    <Position X="10.25" Y="7.25" Width="1.5" />
+    <Position X="15.5" Y="9.25" Width="1.5" />
     <NestedTypes>
       <Class Name="Cloud_Storage.Controllers.AccountController.ChallengeResult" Collapsed="true">
         <TypeIdentifier>
@@ -97,7 +97,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Controllers.FileController">
-    <Position X="8.25" Y="7.25" Width="1.5" />
+    <Position X="13.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QCAAEAAAADIgAAAAACQIBAAAAAABAEgAAAEAQQBIAAA=</HashCode>
       <FileName>Controllers\FileController.cs</FileName>
@@ -111,14 +111,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Controllers.HomeController">
-    <Position X="8.25" Y="12.5" Width="1.5" />
+    <Position X="13.5" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAA=</HashCode>
       <FileName>Controllers\HomeController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cloud_Storage.Controllers.ManageController">
-    <Position X="6.5" Y="7.25" Width="1.5" />
+    <Position X="11.75" Y="9.25" Width="1.5" />
     <NestedTypes>
       <Enum Name="Cloud_Storage.Controllers.ManageController.ManageMessageId" Collapsed="true">
         <TypeIdentifier>
@@ -277,6 +277,11 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAA=</HashCode>
       <FileName>App_Start\Startup.Auth.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="15.5" Y="8" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Cloud_Storage.ASPSMSX2.ASPSMSX2Soap" Collapsed="true">
     <Position X="2.75" Y="0.5" Width="1.5" />
